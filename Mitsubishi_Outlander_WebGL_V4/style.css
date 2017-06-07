@@ -1,0 +1,323 @@
+html,
+
+
+body {
+    background: #e9e9e9;
+    color: #eee;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-image:url('bg_6.jpg'); background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover;   background-position:center;
+	
+}
+
+h3 {
+    color: #888;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.7vh;
+    font-weight: lighter;
+    
+    
+    
+}
+
+a {
+    color: skyblue;
+    text-decoration: none
+}
+
+canvas {
+    pointer-events: none;
+    z-index: 10;
+    position: relative;
+}
+
+#d {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 1em 0 -4.5em 0;
+    z-index: 1000;
+}
+
+.bwrap {
+    margin: 0.5em 0 0 0
+}
+
+button {
+    font-family: georgia;
+    border: 1px solid saddlebrown;
+    bottom: 100px;
+    background: #000;
+    color: #fff;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background: #333
+}
+
+#buttons_cars button {
+    color: #fa0
+}
+
+#oldie {
+    background: rgb(50, 0, 0) !important;
+    color: #fff !important;
+    margin-top: 7em !important
+}
+
+#ctrl {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 250px;
+    color: #bbb;
+    padding: 5px;
+    font-family: Monospace;
+    font-size: 13px;
+    z-index: 100;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#ctrl h3 {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+#ctrl > div {
+    margin-left: 20px;
+}
+
+.ctrl-block > div > div {
+    clear: both;
+    min-height: 33px;
+}
+
+#ctrl label {
+    width: 70px;
+    margin-right: 5px;
+    display: block;
+    float: left;
+    font-size: 12px;
+}
+
+#ctrl2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    color: #bbb;
+    padding: 5px;
+    font-family: Monospace;
+    font-size: 13px;
+    z-index: 100;
+    display: none;
+}
+
+#bridge-status {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-size: 0.8em;
+    text-align: left;
+    background-color: rgba(4, 4, 4, 0.6);
+    color: rgb(255, 255, 255);
+    width: 120px;
+    padding: 0.5em;
+    z-index: 1000;
+    display: none;
+    white-space: pre;
+}
+
+#viewer-container {
+    height: 100%;
+    position: relative;
+	cursor: url(cursor_4.cur), move;
+}
+
+#my_webgl {
+/*    width: 90%;
+    height: 90%; 
+	width: 475px;
+	height: 640px;*/
+	width: 100%;
+	height: 100%;
+    overflow-y: hidden;
+    cursor: url(cursor_4.cur), move;
+    position: relative;
+}
+
+#ctrl2 label,
+#ctrl2 textarea {
+    display: block;
+}
+
+#ctrl2 textarea {
+    width: 380px;
+    height: 20px;
+	opacity:0.8;
+	background-color:#121212;
+    color: white;
+    font-size: 11px;
+	z-index: -1000;
+}
+
+#stats,
+#render-info,
+#scene-explorer,
+#camera-info,
+#status-info {
+    position: absolute;
+    font-size: 12px;
+    padding: 5px;
+    width: 200px;
+    z-index: 100;
+}
+
+#stats {
+    top: 0px;
+    right: 0px;
+    padding: 0;
+}
+
+
+#render-info {
+    top: 50px;
+    right: 0px;
+}
+
+#render-info a {
+    cursor: pointer;
+}
+
+#scene-explorer {
+    top: 0;
+    left: 0;
+}
+
+#scene-explorer .cam {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#camera-switcher {
+  font-size: 1.4vh;
+  text-align: center;
+  width: 80px;
+  z-index: 1009;
+  top:40px;
+  right:0;
+  height: 85%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  position:absolute;
+  
+  }
+
+#camera-switcher a {
+  color: #fff;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.8);
+  zoom: 1;
+  margin: 2px;
+  width: 60px;
+  }
+
+#camera-switcher a:hover {
+  background-color: rgba(245,245,245,0.8); !important;
+  color: #000;
+  }
+
+#mat-switcher {
+  font-size: 12px;
+  text-align: center;
+  width: 180px;
+  height: 80%;
+  z-index: 1009;
+  top:0;
+  left:0;
+  }
+
+#mat-switcher a {
+  color: #666;
+  display: inline-block;
+  padding: 1px 22px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  border: 1px solid;
+  cursor: pointer;
+  zoom: 1;
+  margin: 4px;
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-color:#d9d9d9;
+  border-color:#c9c9c9;
+  }
+
+#mat-switcher a:hover {
+  background-color:#e5e5e5 !important;
+  }
+  
+  
+#camera-info {
+    top: 259px;
+    right: 0;
+    width: 70px;
+	background-color: rgba(4, 4, 4, 0.6);
+    color: rgb(255, 255, 255);
+}
+
+#status-info {
+  bottom: 3%;
+  right: 22%;
+  position: absolute;
+  font-size: 1.6vh;
+  font-weight: lighter;
+  text-align: center;
+  padding: 8px;
+  width: 50%;
+  z-index: 1000;
+  color: #ddd;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.ui_left {
+    position: absolute;
+    left: 16px;
+    top: -16px;
+    z-index: 98;
+    height: 100vh;
+    width: 25vh;
+    overflow: hidden;
+	background-image:url('_tex/ui_left.png'); background-repeat:no-repeat; -webkit-background-size:25vh 100vh; -moz-background-size:25vh 100vh; -o-background-size: 25vh 100vh; background-size:25vh 100vh;   background-position:center top;
+	
+}
+
+.ui_right {
+    position: absolute;
+    right: 16px;
+    top: -16px;
+    z-index: 98;
+    height: 100vh;
+    width: 25vh;
+    overflow: hidden;
+	background-image:url('_tex/ui_right.png'); background-repeat:no-repeat; -webkit-background-size:25vh 100vh; -moz-background-size:25vh 100vh; -o-background-size: 25vh 100vh; background-size:25vh 100vh;   background-position:center top;
+	
+}
+

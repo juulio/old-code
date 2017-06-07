@@ -1,0 +1,290 @@
+.matryoshka {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.matryoshka .veil {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.matryoshka .veil-bottom-1 {
+  position: absolute;
+  top: 114px;
+  left: 90px;
+  width: 170px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.matryoshka .veil-bottom-2 {
+  position: absolute;
+  top: 114px;
+  right: 90px;
+  width: 170px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.matryoshka .head {
+  position: absolute;
+  top: 19px;
+  left: 39%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #f6ddbe;
+}
+
+.matryoshka .eye {
+  position: absolute;
+  top: 54px;
+  left: 210px;
+}
+
+.matryoshka .eye::before {
+  position: absolute;
+  left: 60px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3399FF;
+}
+
+.matryoshka .eye::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3399FF;
+}
+
+.matryoshka .cheek {
+  position: absolute;
+  top: 80px;
+  left: 210px;
+}
+
+.matryoshka .cheek::before {
+  position: absolute;
+  left: 70px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: pink;
+}
+
+.matryoshka .cheek::after {
+  position: absolute;
+  left: -10px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: pink;
+}
+
+.matryoshka .smile  {
+  position: absolute;
+  top: 74px;
+  left: 224px;
+  border: 2px solid #FF9966  ;
+  display: block;
+  min-width: 2em;
+  min-height: 1em;
+  padding: 0.5em;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.matryoshka .body {
+  width: 300px;
+  height: 300px;
+  margin: -10px auto 0 auto;
+  border-radius: 50%;
+  background-color: #FFCC00 ;
+}
+
+.matryoshka .apron {
+  position: absolute;
+  top: 180px;
+  left: 150px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white ;
+}
+
+.matryoshka .apron .cap{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white ;
+}
+
+.matryoshka .apron .cap.one {
+  top: 55px;
+  left: -20px;
+}
+
+.matryoshka .apron .cap.two {
+  top: 120px;
+  left: -15px;
+}
+
+.matryoshka .apron .cap.three {
+  top: 165px;
+  left: 30px;
+}
+
+.matryoshka .apron .cap.four {
+  top: 170px;
+  left: 105px;
+}
+
+.matryoshka .apron .cap.five {
+  top: 130px;
+  left: 160px;
+}
+
+.matryoshka .apron .cap.six {
+  top: 60px;
+  left: 175px;
+}
+
+.matryoshka .body::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: -1;
+}
+
+.matryoshka .body::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 80px;
+  right: 120px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: -1;
+}
+
+.matryoshka .body-clean-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 177px;
+  height: 206px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.matryoshka .body-clean-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 177px;
+  height: 206px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.matryoshka .butterfly {
+  position: absolute;
+  top:300px;
+  right: 140px;
+}
+
+.matryoshka .wing {
+  position: absolute;
+  right: 0;
+  width: 150px;
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+}
+
+.matryoshka .wing.left{
+  position: absolute;
+  top:10px;
+  right: 20px;
+  width: 150px;
+  transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+.matryoshka .wing::before, .matryoshka .wing::after {
+  content: "";
+  background: red;
+  display: block;
+  height: 50px;
+  width: 75px;
+}
+.matryoshka .wing::before{
+  position: absolute;
+  left: 80px;
+  border-top-left-radius: 170px;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 12px;
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  z-index: 5;
+}
+
+.matryoshka .wing::after{
+  position: absolute;
+  border-top-right-radius: 170px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 200px;
+  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  z-index: 15;
+}
+
+/* animation */
+
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}

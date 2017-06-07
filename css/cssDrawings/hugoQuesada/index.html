@@ -1,0 +1,179 @@
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.wing{
+			    background-color: red;
+			    display: block;
+			    position: absolute;
+			    top: 27%;
+  				left: 21%;
+			    border: red solid 2px;
+			    width: 50px;
+			    height: 25px;
+			    border-radius: 76%/100% 0;
+			    z-index:2;
+			    transform: rotate(-25deg);
+			    -webkit-transform:  rotate(-25deg);
+			    }
+			.mouth{
+			    position: absolute;
+			   	top: 1.2%;
+  				left: 43.2%;
+			    width: 0;
+			    height: 0;
+			    border-left: 2em solid transparent;
+			    border-right: 1em solid orange;
+			    border-top: 3em solid transparent;
+			    transform: rotate(84deg);
+			    -webkit-transform:  rotate(84deg);
+			    z-index:10;
+			    }
+			.mouth2{
+			    position: absolute;
+			    top: 17%;
+  				left: 44.4%;
+			    width: 0;
+			    height: 0;
+			    border-left: 1em solid rgb(174, 140, 94);
+			    border-right: 1em solid transparent;
+			    border-top: 2em solid transparent;
+			    transform: rotate(90deg);
+			    -webkit-transform:  rotate(90deg);
+			    z-index:10;
+			    }
+			.body{
+			    position: absolute;
+			    top: 10%;
+			    left: 15%;
+			    width: 100px;
+			    height: 100px;
+			    background-color: black;
+			    border-radius: 28% 51%;
+			    transform: rotate(80deg);
+			    -webkit-transform:  rotate(80deg);
+			    z-index:1;
+			}
+			.eye{
+			    background-color: white;
+			    border: solid black 3px;
+			    margin: 0 auto;
+			    height: 15px;
+			    width:15px;
+			    border-radius: 50%;
+			    position: absolute;
+			    top: 11%;
+  				left: 35.5%;
+			    z-index: 10;
+			}
+			.iris{
+			    margin: 0 auto;
+			    border-radius: 50%;
+			    width: 5px;
+			    height: 5px;
+			    position:relative;
+			    background-color: black;
+			    margin-top:4px;
+			    margin-right:2px;
+			    z-index: 10;
+			}
+			.neck{
+			  border: black solid 1px;
+			  background-color: white;
+			  height: 67px;
+			  width: 35px;
+			  position: absolute;
+			  top: 8.5%;
+  			  left: 35.5%;
+			  border-radius: 47%;
+			  z-index: 1;
+			  transform: rotate(-22deg);
+			  -webkit-transform:  rotate(-22deg);
+			}
+
+			.shoes:before {
+			  position: absolute;
+			  content: '';
+			  width: 9px;
+			  height: 6px;
+			  background-color: black;
+			  top: 6px;
+			  left: 0px;
+			  border-bottom-right-radius: 40%;
+			}
+			.shoes {
+			  background-color: black;
+			  width: 45px;
+			  height: 9px;
+			  top: 48%;
+  			  left: 23.8%;
+			  border-top-right-radius: 14px;
+			  transform: rotate(-2deg);
+			  -webkit-transform:  rotate(-2deg);
+			  position: absolute;
+			  z-index: 1;
+			}
+			.shoes:after {
+			  position: absolute;
+			  content: '';
+			  border-top-right-radius: 30%;
+			  width: 30px;
+			  height: 6px;
+			  background-color: black;
+			  top: 8px;
+			  right: 0px;
+			  border-bottom-right-radius: 31%;
+			  border-bottom-left-radius: 50%;
+			  transform: rotate(2deg);
+			  -webkit-transform:  rotate(2deg);
+			}
+			.tail{
+			    background-color: red;
+			    display: block;
+			    position: absolute;
+			    top: 33%;
+  				left: 9%;
+			    border: red solid 2px;
+			    width: 25px;
+			    height: 12px;
+			    border-radius: 76%/100% 0;
+			    z-index:0;
+			    transform: rotate(74deg);   
+			    -webkit-transform:  rotate(74deg);   
+			}
+			.legs{
+			    width: 10px;
+			    height:20px;
+			    background-color:orange;
+			    position:absolute;
+			    top: 42%;
+  				left: 25%;
+
+			}
+			.wrapper{
+				position: relative;
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	
+	<body><a href="../index.php">
+		<div class="wrapper">
+			<div class="wing"></div>
+			<div class="mouth"></div>
+			<div class="mouth2"></div>
+			<div class="body"></div>
+			<div class="neck"></div>
+			<div class="eye">
+			    <div class="iris"></div>
+			</div>
+			<div class="shoes">
+			    <span class="small_shoes"></span></div>
+			<div class="tail"></div>
+			<div class="legs"></div>
+		</div>
+	</a></body>
+	
+</html>

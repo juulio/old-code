@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: Arial, Helvetica;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clear {
+    clear: none;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.absoluteCentered {
+    left: 50%;
+    position: absolute;
+}
+/************************************************************************/
+body {
+    padding-top: 25px;
+    background-image: -webkit-radial-gradient(#586265, #5C7178);
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 0.01s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+    0%  { background-image: -webkit-radial-gradient(#586265, #5C7178); }
+    50% { background-image: -webkit-radial-gradient(#5C7178, #586265); }
+}
+
+section {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.head {
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    background: rgb(255, 179, 0);
+    -moz-border-radius: 100px / 50px;
+    -webkit-border-radius: 100px / 50px;
+    border-radius: 120px / 150px;
+}
+
+.earsContainer {
+    top: 120px;
+    width: 450px;
+    margin-left: -227px;
+}
+
+.ear {
+    width: 40px;
+    height: 180px;
+    background-color: black;
+}
+
+.nose {
+    width: 0;
+    height: 0;
+    top: 240px;
+    margin-left: -50px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 140px solid red;
+}
+
+/******************************/
+.eyesContainer {
+    top: 150px;
+    width: 250px;
+    margin-left: -125px;
+}
+.eye {
+    display: inline-block;
+    width:5em;
+    height:5em;
+    background: #000;
+    position: relative;
+    border-radius:65% 0;
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.eye:before,
+.eye:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top:50%;
+    left:50%;
+    border-radius:100%;
+}
+
+.eye:before {
+    height:.5em;
+    width:.5em;
+    background: #fff;
+    margin-top:-.25em;
+    margin-left:-.25em;
+}
+
+.eye:after {
+    height:.25em;
+    width:.25em;
+    background: #000;
+    margin-top:-.125em;
+    margin-left:-.125em;
+}
+
+/******************************************/
+.mouth {
+    display: block;
+    width: 250px;
+    height: 10px;
+    margin: 5px auto 0;
+    background: rgba(0,0,0,.9);
+    border-radius: 10px 10px 100px 100px;
+    border-radius: 10px 10px 50% 50%;
+    transition: border-radius .5s, height .5s cubic-bezier(.15,.60,.30,1.9);
+    overflow: hidden;
+    line-height: 0;
+    transform-origin: center top;
+    position: absolute;
+    top: 450px;
+    margin-left: -125px;
+}
+
+@keyframes hungry {
+    70%{ height:40px; } 
+}
+
+@-webkit-keyframes hungry {
+    70%{ height:40px; }     
+}
+
+.mouth.hungry{
+    -webkit-animation: hungry 1s infinite;
+    border-radius: 30px 30px 50% 50%;
+    height: 80px;  
+}

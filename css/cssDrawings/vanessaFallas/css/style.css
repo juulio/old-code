@@ -1,0 +1,253 @@
+
+body {
+    line-height: 1;
+    background: 
+    linear-gradient(115deg, transparent 75%, rgba(28,25,25,.8) 75%) 0 0,
+    linear-gradient(245deg, transparent 75%, rgba(28,25,25,.8) 75%) 0 0,
+    linear-gradient(115deg, transparent 75%, rgba(28,25,25,.8) 75%) 7px -15px,
+    linear-gradient(245deg, transparent 75%, rgba(28,25,25,.8) 75%) 7px -15px,
+    #141414;
+    background-size: 15px 30px;
+}
+
+div {margin: o; padding: 0;}
+div div {position: relative;}
+
+#levels_mask{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+    background: -o-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+    background: -ms-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+    background: -moz-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+    background: -webkit-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+}
+
+.wrapper{
+    position: relative;
+    margin:0;
+  }
+
+.mandala{
+  background: rgba(67,170,173,.2);
+  width: 300px;
+  height: 300px;
+  margin: 90px auto;
+  border-radius: 50%;
+  position: relative;
+
+  box-shadow: 
+    0 0 0 30px rgba(242,127,98,.3),
+    0 0 0 45px rgba(171,188,133,.2),
+    0 0 0 80px rgba(67,170,173,.1);
+}
+
+.star {
+  width: 0;
+  height: 0;
+  top: -20px;
+  margin: 90px auto;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 50px solid rgba(161,255,119,0.1);
+}
+
+
+.aura {
+    display:block;
+    width:225px;
+    height:225px;
+    margin: 90px auto;
+    top: -360px;
+    background:transparent;
+    -moz-border-radius:45px;
+    -webkit-border-radius:45px;
+    border-radius:45px;
+    radius:45px;
+    position:relative;
+    border: 1px dotted rgba(255,255,255,.4);
+    box-shadow: 0 0 1em 0 rgba(171,188,133,0.3) inset;
+}
+
+.aura span {
+    display:block;
+    width:225px;
+    height:225px;
+    background:transparent;
+    -webkit-transform:rotate(22.5deg);
+    -moz-transform:rotate(22.5deg);
+    rotation:22.5deg;
+    -moz-border-radius:60px;
+    -webkit-border-radius:60px;
+    border-radius:60px;
+    border: 1px dotted rgba(255,255,255,.4);
+    box-shadow: 0 0 1em 0 rgba(171,188,133,0.3) inset;
+}
+
+
+
+#sombrero{
+  background: #B0064B;
+  position: relative;
+  width: 160px;
+  height: 114px;
+  top: -60px;
+  left: 20px;
+  -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+  border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+}
+
+
+.buda{
+  height: 404px;
+  width: 334px;
+  margin: 120px auto;
+  top: -600px;
+  left: 22px;
+  
+}
+.cabeza{
+  top: 32px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  left: 50px;
+  background: #B0064B;
+  border-radius: 50% 50% 50% 50% / 17% 17% 30% 30%;
+}
+
+.cabeza:before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 21% / 50%;
+}
+
+
+.ojo_izquierdo, .ojo_derecho {
+  width: 60px; height: 60px;
+  position: absolute; 
+  /*background: #E80863;*/
+  top: 30px;
+  border: 1px solid #fff;
+  -moz-border-radius: 110px 110px 0 110px;
+  border-radius: 110px 110px 0 110px;
+}
+
+.ojo_izquierdo {
+  left: 50px;
+  margin-left: -13px;
+  -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+
+.ojo_derecho {
+  right: 50px;
+  margin-right: -13px;
+  -webkit-transform: rotate(-180deg);
+       -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+         -o-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+}
+
+.cuerpo{
+  top: 40px;
+  position: relative;
+  width: 320px;
+  height: 300px;
+  background: #B0064B;
+  border-radius: 50% 50% 50% 50% / 17% 17% 30% 30%;
+}
+
+.cuerpo:before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 21% / 50%;
+}
+
+
+
+.pierna_izquierdo, .pierna_derecho{
+    position: absolute;
+    top: 180px;
+    width: 40px;
+    height: 40px;
+    border: 50px solid #B0064B;
+    background: #B0064B;
+    -moz-border-radius: 110px 110px 0 110px;
+         border-radius: 110px 110px 0 110px;
+}
+
+.pierna_izquierdo{
+    left: -20px;
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+
+.pierna_derecho{
+    left: 190px;
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.piernas{
+  width: 355px;
+  height: 100px;
+  left: -20px;
+  top: 145px;
+  -moz-border-radius: 100px / 80px;
+  -webkit-border-radius: 100px / 80px;
+  border-radius: 100px / 80px;
+  background: radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+  background: -o-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+  background: -ms-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+  background: -moz-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+  background: -webkit-radial-gradient(center bottom, ellipse cover, transparent, rgba(0,0,0,.4));
+}
+
+.mano-izquierda, .mano-derecha{
+    height:47px;
+    width:90px;
+    top: 60px;
+    position: absolute;
+    background:#E60963;
+      -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+ 
+}
+
+.mano-izquierda{
+  left: 90px;
+   border-radius: 0px 60px 0 20px;
+    -moz-border-radius: 0px 60px 0 20px;
+    -webkit-border-radius: 0px 60px 0 20px;
+}
+
+.mano-derecha{
+  right: 90px;
+     border-radius: 20px 0px 60px 0;
+    -moz-border-radius: 20px 0px 60px 0;
+    -webkit-border-radius: 20px 0px 60px 0;
+}

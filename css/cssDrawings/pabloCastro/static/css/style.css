@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/***************************************************/
+/* ---- GLOBAL STYLING --------------------------- */
+/***************************************************/
+/* <THT> */
+/* <THT Site>*/
+/* TOC */
+/*  1. Global Constants */
+/*  2. CSS Reset */
+/*  3. Layout */
+/*  4. Content */
+/***************************************************/
+/* 1. GLOBAL CONSTANTS --------------------------- */
+/***************************************************/
+/* CAMEL CASE FORMAT */
+@import url(http://fonts.googleapis.com/css?family=Coda+Caption:800);
+/* line 51, ../scss/_base.scss */
+.table {
+  display: table;
+  margin: 0 auto;
+}
+
+/*------------------------------------------------ */
+/* IMPORTS                                         */
+/*------------------------------------------------ */
+/*Compass Reset*/
+/* line 5, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/***************************************************/
+/*  4. CONTENT ----------------------------------- */
+/***************************************************/
+/*------------------------------------------------ */
+/*  GENERAL                                        */
+/*------------------------------------------------ */
+/* line 9, ../scss/_content.scss */
+body {
+  color: #666;
+  background-color: #fff;
+  border: 10px solid #000;
+  height: 100%;
+  padding: 50px 0;
+}
+
+/* line 17, ../scss/_content.scss */
+div[role="main"] {
+  margin: 0 auto;
+}
+
+/* line 21, ../scss/_content.scss */
+h1 {
+  font-size: 150%;
+}
+
+/* line 25, ../scss/_content.scss */
+#container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/*------------------------------------------------ */
+/*  HEADER                                         */
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+/*  CONTENT                                        */
+/*------------------------------------------------ */
+/* line 40, ../scss/_content.scss */
+.fabio {
+  width: 400px;
+  height: 590px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 47, ../scss/_content.scss */
+.head {
+  width: 300px;
+  height: 360px;
+  background-color: #3a3d49;
+  position: absolute;
+  left: 50px;
+  top: 60px;
+  border-radius: 155px 155px 0 0 / 151px 151px 0 0;
+}
+
+/* line 59, ../scss/_content.scss */
+.head-triangle-bottom {
+  left: 176px;
+  top: 62px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 230px 25px 0 25px;
+  border-color: #fff transparent transparent transparent;
+}
+/* line 69, ../scss/_content.scss */
+.head-triangle-bottom:after {
+  left: -23px;
+  top: -237px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 226px 23px 0 23px;
+  border-color: #3a3d49 transparent transparent transparent;
+}
+
+/* line 82, ../scss/_content.scss */
+.head-triangle-top {
+  left: 176px;
+  top: 10px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 50px 25px;
+  border-color: transparent transparent #3a3d49 transparent;
+}
+
+/* line 95, ../scss/_content.scss */
+.eye {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 10px solid #fff;
+  background-image: radial-gradient(circle closest-side at 40px 40px, #b3b3b3, #3a3d49);
+  position: absolute;
+  top: 215px;
+}
+/* line 103, ../scss/_content.scss */
+.eye.left {
+  left: 65px;
+}
+/* line 106, ../scss/_content.scss */
+.eye.right {
+  left: 230px;
+}
+
+/* line 111, ../scss/_content.scss */
+.mouth {
+  width: 348px;
+  height: 113px;
+  background-color: #3a3d49;
+  top: 430px;
+  position: absolute;
+  left: 25px;
+  -webkit-border-bottom-right-radius: 50px;
+  -webkit-border-bottom-left-radius: 50px;
+  -moz-border-radius-bottomright: 50px;
+  -moz-border-radius-bottomleft: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+/* line 126, ../scss/_content.scss */
+.cheek {
+  height: 170px;
+  width: 15px;
+  background-color: #3a3d49;
+  position: absolute;
+  top: 260px;
+}
+/* line 132, ../scss/_content.scss */
+.cheek.left {
+  left: 25px;
+}
+/* line 134, ../scss/_content.scss */
+.cheek.left:after {
+  content: "";
+  border-radius: 50%;
+  width: 30px;
+  height: 70px;
+  position: absolute;
+  background-color: #3a3d49;
+  border-radius: 155px 0 0 155px / 151px 0 0 151px;
+  left: -38px;
+  top: 30px;
+}
+/* line 146, ../scss/_content.scss */
+.cheek.right {
+  left: 358px;
+}
+/* line 148, ../scss/_content.scss */
+.cheek.right:after {
+  content: "";
+  border-radius: 50%;
+  width: 30px;
+  height: 70px;
+  position: absolute;
+  background-color: #3a3d49;
+  border-radius: 0 155px 155px 0/0 151px 151px 0;
+  left: 22px;
+  top: 30px;
+}
+
+/* line 163, ../scss/_content.scss */
+.title {
+  font-family: "Coda Caption", sans-serif;
+  text-transform: uppercase;
+  font-size: 60px;
+  position: relative;
+  text-align: center;
+  width: 610px;
+  margin: 0 auto;
+  color: #591f14;
+}
+/* line 172, ../scss/_content.scss */
+.title:after {
+  content: "IRON GIANT";
+  position: absolute;
+  color: green;
+  font-size: 90px;
+  width: 610px;
+  color: #e15848;
+  left: 0;
+  top: 22px;
+}
+/* line 182, ../scss/_content.scss */
+.title span {
+  font-size: 30px;
+  margin-top: -20px;
+  position: relative;
+  text-align: left;
+  display: block;
+}
+/* line 188, ../scss/_content.scss */
+.title span:after {
+  content: "THE";
+  position: absolute;
+  color: #e15848;
+  left: 0;
+  top: -4px;
+}
+
+/* line 199, ../scss/_content.scss */
+.tree {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid black;
+  position: relative;
+}
+/* line 206, ../scss/_content.scss */
+.tree:after {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid gree;
+  position: relative;
+  content: "";
+}
+
+/*------------------------------------------------ */
+/*  FOOTER                                         */
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+/*  ICONS                                          */
+/*------------------------------------------------ */

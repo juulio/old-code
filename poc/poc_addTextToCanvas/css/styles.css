@@ -1,0 +1,1089 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: Arial, Helvetica;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clear {
+    clear: none;
+}
+
+/* FONTS 
+------------------------------------------------------------------*/
+.archerRegular {
+  font-family: 'Archer SSm A', 'Archer SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+
+.archerBold {
+  font-family: 'Archer SSm A', 'Archer SSm B';
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* GENERAL LAYOUT
+------------------------------------------------------------------*/
+body {
+    color: #FFF;
+    background-color: #ebebeb;
+}
+
+section {
+    margin-bottom: 30px
+}
+
+.titleContainer {
+    margin-bottom: 0;
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #a42830;
+}
+
+.titleContainer h2 {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.circle {
+    width: 18px;
+    padding-left: 9px;
+    padding-top: 3px;
+    float: left;
+    height: 24px;
+    font-size: 18px;
+    margin-top: 4px;
+    margin-right: 9px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #ca4e4b;
+}
+
+.stepOne .circle {
+    width: 17px;
+    padding-left: 10px;
+}
+
+.stepTwo .circle {
+    padding-top: 2.5px;
+    height: 23.5px;
+}
+
+.stepThree .circle {
+    padding-top: 2px;
+}
+
+.instructionsContainer.stepOne {
+    width: 176px;
+}
+
+.instructionsContainer {
+    width: 265px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    background-color: #ebebeb;
+}
+
+.instructionsText {
+    float: right;    
+    height: 36px;
+    width: 220px;
+    color: #7f8080;
+    font-size: 15px;
+    line-height: 34px;
+}
+
+.stepOne .instructionsText {
+    width: 140px;
+}
+
+.instructionsTextStep3 {
+    width: 85%;
+    line-height: 22px;
+    word-wrap: break-word;
+    background-image: none;
+    background-color: transparent;
+}
+
+.button {
+    color: #FFF;
+    float: left;    
+    border: none;
+    width: 136px;
+    height: 36px;
+    padding: 10px;
+    font-size: 14px;
+    outline:  none;
+    cursor: pointer;
+    background-color: #ca4e4b;
+    background-repeat: no-repeat;
+    background-image: url(../img/sprites.png);
+}
+
+.button.disabled {
+    background-color: gray;
+    cursor: default;
+}
+
+.home {
+    float: right;
+    background-position: -337px -97px;
+}
+
+.create {
+    float: right;
+    background-position: 45px -97px;
+}
+
+.back {
+    background-position: -77px -97px;
+}
+
+.canvasContainer {
+    display: none;
+}
+
+.canvasContainer, 
+.buttonsContainer {
+    /*padding: 10px 20px 10px;*/
+    padding: 0px 20px 10px;
+}
+
+#sbx_canvas{
+    width: 426px;
+    height: 426px;
+    margin: 0 auto;
+}
+
+.namesForm {
+    color: gray;
+    display: none;
+    position: relative;
+}
+
+.buttonsContainer {
+    display: none;
+    font-size: 10px;
+    color: gray;
+}
+
+.thumbs:after,
+.buttonsContainer:after,
+.instructionsContainer:after,
+.socialMediaContainer:after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+
+.errorMsg,
+.profanityErrorMsg {
+    color: #c6403f;
+    display: block;
+    font-size: 10px;
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    left: 36px;
+}
+
+.textInput {
+    width: 104px;
+    height: 37px;
+    border: none;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.youAndWho {
+    width: 202px;
+    height: 85px;
+    display: block;
+    margin: 0 auto;
+    background: transparent url(../img/sprites.png) left top no-repeat;
+}
+
+.thumbs {
+    width: 295px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.thumb {
+    width: 95px;
+    height: 95px;
+    display: block;
+}
+
+.thumbs li {
+    width: 95px;
+    height: 95px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 4px;
+}
+
+.thumbs li:nth-child(odd) {
+    background-color: #ee6f8a;
+}
+
+.thumbs li:nth-child(even) {
+    background: #d03e3e;
+}
+
+.thumbs li:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.thumb.selected{
+    outline: solid 4px #ebebeb;
+}
+
+/* Get URL parameter page 
+------------------------------------------------------------------*/
+
+.parameter {
+    color: green;
+    font-weight: bold;
+}
+
+ /* HEADER STYLES 
+ ------------------------------------------------------------------*/
+ #mainHeader {
+    height: 60px;
+    width: 100%;
+    color: #808080;
+    -webkit-font-smoothing: antialiased;
+}
+
+#mainHeader .mainHeaderAffix {
+    background-color: white;
+    height: 60px;
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    -webkit-tranform: -webkit-translate3d(0, 0, 0);
+    tranform: translate3d(0, 0, 0);
+}
+
+.indexPage #mainHeader .mainHeaderAffix .blogName, .indexPage #mainHeader .mainHeaderAffix .sbLogo {
+    display: block;
+    overflow: hidden;
+}
+
+#mainHeader .mainHeaderAffix .blogName {
+    background-position: -350px -100px;
+    text-indent: -2000%;
+    width: 91px;
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    margin-left: -45px;
+    top: 18px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#mainHeader .mainHeaderAffix .sbLogo {
+    background-position: -372px -26px;
+    text-indent: -2000%;
+    width: 45px;
+    height: 45px;
+    left: 12px;
+    position: absolute;
+    top: 12px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.sprite {
+    background-repeat: no-repeat;
+    background-image: url("http://sbux100-love.s3-website-us-west-2.amazonaws.com/v1/img/sprites.png");
+}
+
+.pull-right {
+    float: right !important;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+}
+
+.share-box {
+    width: 0px;
+    -webkit-transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 67px;
+    background: transparent url("http://sbux100-love.s3-website-us-west-2.amazonaws.com/v1/img/shareBoxBG.png") no-repeat 1px;
+    height: 33px;
+    padding-left: 1px;
+    border-right: 0px solid #d7d7d7;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.share-box a {
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+    overflow: hidden;
+    text-indent: 200%;
+    margin: 10px 15px 0 0;
+}
+
+.share-box a.facebook {
+    background-position: -111px -192px;
+    width: 7px;
+}
+
+.share-box a.twitter {
+    background-position: -139px -193px;
+    width: 15px;
+}
+
+.share-box a.pinterest {
+    background-position: -206px -192px;
+    width: 11px;
+}
+
+.share-box a.gplus {
+    background-position: -237px -192px;
+    width: 14px;
+    margin-right: 0px;
+}
+
+.share-box-open .share-box {
+    width: 135px;
+    padding-left: 18px;
+    border-right-width: 1px;
+    opacity: 1;
+}
+
+#mainHeader form {
+    margin: 0;
+}
+
+/*#mainHeader input {
+    background-color: #ebebeb;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    margin: 0;
+    vertical-align: baseline;
+}*/
+
+#mainHeader .mainHeaderAffix #mobileMenuBtn {
+    width: 27px;
+    height: 22px;
+    background-position: 0 0;
+    position: absolute;
+    top: 19px;
+    right: 6px;
+    cursor: pointer;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu {
+    opacity: 0;
+    background-color: #FFF;
+    position: absolute;
+    bottom: auto;
+    top: 60px;
+    right: 100%;
+    width: 100%;
+    font-size: 12px;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    -webkit-transition: opacity 0s;
+    transition: opacity 0s;
+    -webkit-transform: translate(0, -240px);
+    transform: translate(0, -240px);
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu.open {
+    right: 0;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+    opacity: 1;
+    -webkit-transform: translate(0, 0) translate3d(0, 0, 0);
+    transform: translate(0, 0) translate3d(0, 0, 0);
+    z-index: 10000;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu .toggle {
+    width: 30px;
+    height: 22px;
+    background-position: 3px -21px;
+    position: absolute;
+    top: -42px;
+    bottom: auto;
+    right: 3px;
+    cursor: pointer;
+    background-color: white;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu .menu {
+    white-space: nowrap;
+    padding-top: 10px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu ul, #mainHeader .mainHeaderAffix #mobileMenu li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li a {
+    display: block;
+    padding: 13px;
+    text-align: left;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li, #mainHeader .mainHeaderAffix #mobileMenu a, #mainHeader .mainHeaderAffix #mobileMenu a:active, #mainHeader .mainHeaderAffix #mobileMenu a:visited {
+    color: #808080;
+    line-height: 1em;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu ul, #mainHeader .mainHeaderAffix #mobileMenu li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu form input[type=text] {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 0 10px 10px;
+    border: 0;
+    line-height: 1em;
+    padding: 3px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect {
+    margin: 6px 0 15px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect a {
+    display: inline-block;
+    width: 10px;
+    padding: 13px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect .facebook {
+    background-position: -99px -186px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect .twitter {
+    background-position: -132px -186px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect .instagram {
+    background-position: -164px -186px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect .pinterest {
+    background-position: -196px -186px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect .gplus {
+    background-position: -227px -186px;
+}
+
+#mainHeader .mainHeaderAffix #mobileMenu li .socialConnect .youtube {
+    background-position: -259px -186px;
+}
+
+.visible-xs, .visible-sm, .visible-md, .visible-lg {
+    display: none !important;
+}
+
+#mainHeader .col-md-5{
+    padding: 0 1% 0 40px;
+    margin: 1em 0;
+}
+
+.socialMediaContainer {
+    display: none;
+    width: 260px;
+    margin: 20px auto;
+}
+
+.socialMediaContainer li {
+    float: left;
+    margin-right: 7px;
+}
+
+.socialMediaContainer li a {
+    display: block;
+    width: 45px !important;
+    height: 45px!important;
+    background-repeat: no-repeat;
+    /*background-size: initial !important;*/
+    background-image: url(../img/sprites.png) !important;
+}
+
+.socialMediaContainer .facebook {
+    background-position: -226px top;
+}
+
+.socialMediaContainer .twitter {
+    background-position: -284px top;
+}
+
+.socialMediaContainer .pinterest {
+    background-position: -341px top;
+}
+
+.socialMediaContainer .googleplus {
+    background-position: -398px top;
+}
+
+.socialMediaContainer .download {
+    background-position: -455px top;
+}
+
+.starbucksLoveShareCard .titleContainer {
+    height: 130px;
+    padding: 30px 10px 0;
+}
+
+.cardImageContainer {
+    max-width: 100%;
+    padding: 20px;
+}
+
+#cardImage {
+    width: 100%;
+}
+
+.loaderAnimation {
+    width: 32px;
+    height: 32px;
+    display: none;
+    margin: 20px auto;
+    background: transparent url(https://s3-us-west-2.amazonaws.com/sbux100-love/invite/img/loader.gif) left top no-repeat;
+}
+
+/* - RESPONSIVE MEDIA QUERIES ---------------------------------------------
+------------------------------------------------------------------------ */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    .sprite {
+        background-image: url("https://s3-us-west-2.amazonaws.com/sbux100-love/v1/img/sprites2x.png");
+        background-size: 500px auto;
+    }
+}
+
+@media (max-width: 479px) {
+    .hidden-xs {
+        display: none !important;
+    }
+
+    .visible-xs {
+        display: block !important;
+    }
+
+    .spritesMobile,
+    .pinterest-container .pinterest {
+        background-size: 500px auto!important;
+    }
+}
+
+/* - STYLES FOR DESKTOP LAYOUT---------------------------------------------
+------------------------------------------------------------------------ */
+@media only screen and (min-width: 480px) {
+    #mobileMenu {
+        display: none;
+    }
+
+    #mainHeader {
+        height: 90px;
+    }
+
+    #mainHeader .mainHeaderAffix {
+        height: 90px;
+    }
+
+    #mainHeader .mainHeaderAffix .blogName {
+        background-position: -100px -46px;
+        width: 139px;
+        height: 30px;
+        margin-left: -69px;
+        top: 35px;
+    }
+
+    #mainHeader .mainHeaderAffix .sbLogo {
+        background-position: -420px 0;
+        width: 146px;
+        height: 70px;
+    }
+
+    .affix .topNav {
+        margin: 35px auto 0 auto;
+    }
+
+    .topNav {
+        display: block;
+        color: #FFF;
+        margin: 35px auto 0 auto;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        padding-right: 20px;
+    }
+
+    .col-md-5 {
+        width: 41.66667%;
+    }
+
+    .topNav li {
+        display: block;
+        float: right;
+        margin-left: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    
+    .topNav .socialWrap {
+       position: relative;
+    }
+
+    .topNav .share-box-open .share-box {
+        width: 205px;
+    }
+
+    .topNav .share-box {
+        -webkit-transition: width 700ms cubic-bezier(0.23, 1, 0.32, 1);
+        -o-transition: width 700ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: width 700ms cubic-bezier(0.23, 1, 0.32, 1);
+        background-image: url("http://sbux100-love.s3-website-us-west-2.amazonaws.com/v1/img/shareBoxBG2.png");
+        height: 42px;
+        padding-left: 0;
+        background-position: right;
+        text-align: right;
+        padding-right: 5px;
+        border-right: 0;
+        border-left: 1px solid #d7d7d7;
+        top: -13px;
+        left: auto;
+        right: 65px;
+        z-index: 10;
+    }
+
+    .topNav .share-box a {
+        margin-top: 15px;
+        height: 16px;
+    }
+
+    .topNav .share-box a.facebook {
+        background-position: 0 -220px;
+        width: 8px;
+    }
+
+    .topNav .share-box a.twitter {
+        background-position: -33px -221px;
+        width: 17px;
+    }
+
+    .topNav .share-box a.instagram {
+        background-position: -71px -221px;
+        width: 15px;
+    }
+
+    .topNav .share-box a.pinterest {
+        background-position: -109px -220px;
+        width: 13px;
+    }
+
+    .topNav .share-box a.gplus {
+        background-position: -145px -220px;
+        width: 16px;
+        margin-right: 11px;
+    }
+
+    .topNav .share-box a.youtube {
+        background-position: -180px -221px;
+        width: 20px;
+    }
+
+    .topNav li:last-child {
+        margin-left: 0;
+    }
+
+    .searchToggle {
+        background-position: -88px -4px;
+        width: 11px;
+        height: 10px;
+        display: block;
+        overflow: hidden;
+        line-height: 10px;
+        position: relative;
+        top: 2px;
+        cursor: pointer;
+    }
+
+    .open .searchToggle {
+        background-position: -103px -4px;
+    }
+
+    .searchWrap {
+        position: relative;
+    }
+
+    .searchWrap form {
+        display: none;
+        position: absolute;
+        left: 20px;
+        top: 0px;
+        width: 260px;
+        background-color: #FFF;
+    }
+
+    .searchWrap input[type=text] {
+        padding: 0;
+        border: 0;
+        width: 100%;
+        outline: none;
+        color: #808080;
+        font-size: 12px;
+        background-color: #FFF;
+        text-transform: uppercase;
+    }
+
+    .searchWrap.open form {
+        display: block;
+    }
+
+    .canvasContainer {
+        width: 426px;
+        height: 426px;
+        margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .topNav li {
+        margin-left: 45px;
+    }
+
+    .titleContainer {
+        height: 170px;
+    }
+
+    .youAndWho {
+        width: 361px;
+        height: 129px;
+        margin-bottom: 26px;
+        background-position: left -297px;
+    }
+
+    .titleContainer h2 {
+        font-size: 13px;
+    }
+
+    .stepOne,
+    .instructionsContainer.stepOne {
+        width: 273px;
+    }
+
+    .stepTwo {
+        /*width: 426px;*/
+        width: 450px;
+        padding-bottom: 0;
+    }
+
+    .stepThree {
+        width: 420px;
+    }
+
+    .circle {
+        width: 30px;
+        height: 40px;
+        margin-top: 0;
+        font-size: 30px;
+        padding-top: 4px;
+        padding-left: 14px;
+    }
+
+    .stepOne .circle {
+        width: 28px;
+        padding-left: 16px;
+    }
+
+    .stepTwo .circle {
+        height: 40px;
+        padding-top: 4px;
+    }
+
+    .instructionsContainer {
+        padding: 0;
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    .stepOne .instructionsText,
+    .instructionsText {
+        width: 220px;
+        height: 42px;
+        font-size: 26px;
+        padding-top: 4px;
+        line-height: 34px;
+    }
+
+    .instructionsText.instructionsTextStep3 {
+        width: 360px;
+        padding-top: 0;
+    }
+
+    .thumbs {
+        width: 480px;
+        padding: 12px 9px 5px;
+        margin: 0 auto;
+    }
+
+    .thumbs li {
+        width: 155px;
+        height: 155px;
+        margin-right: 7px;
+        margin-bottom: 7px;
+        background-color: none;
+    }
+
+    .thumbs li:hover {
+        cursor: pointer;
+    }
+
+    .thumbs img:hover {
+        outline: solid 7px #ebebeb;
+    }
+
+    .thumb {
+        width: 155px;
+        height: 155px;
+    }
+
+    .thumb01 {
+        background-position: left top;
+    }
+
+    .thumb02 {
+        background-position: center top;
+    }
+
+    .thumb03 {
+        background-position: right top;
+    }
+
+    .thumb04 {
+        background-position: left center;
+    }
+
+    .thumb05 {
+        background-position: center center;
+    }
+
+    .thumb06 {
+        background-position: right center;
+    }
+
+    .thumb07 {
+        background-position: left bottom;
+    }
+
+    .thumb08 {
+        background-position: center bottom;
+    }
+
+    .thumb09 {
+        background-position: right bottom;
+    }
+
+    .textInput {
+        height: 44px;
+        width: 155px;
+        color: #7f8080;
+        font-size: 19px;
+        padding-left: 9px;
+    }
+
+    .ampersand {
+        margin: 0 14px;
+        font-size: 38px;
+        vertical-align: middle;
+    }
+
+    .errorMsg,
+    .profanityErrorMsg {
+        font-size: 10px;
+        top: 60px;
+        left: 54px;
+    }
+
+    .buttonsContainer {
+        width: 320px;
+        margin: 0 auto;
+        padding-top: 34px;
+    }
+
+    .button {
+        height: 44px;
+        width: 155px;
+    }
+
+    .button:hover {
+        background-color: #a42831;
+    }
+
+    .button.disabled:hover {
+        background-color: gray;
+    }
+
+    .back {
+        background-position: -163px -577px;
+    }
+
+    .create {
+        background-position: 51px -577px;
+    }
+
+    .home {
+        background-position: -560px -577px;
+    }
+
+    .socialMediaContainer {
+        width: 310px;
+        margin-bottom: 0;
+    }
+
+    .socialMediaContainer li {
+        margin-right: 15px;
+    }
+
+    .socialMediaContainer li:last-child {
+        margin-right: 0;
+    }
+
+    .socialMediaContainer li a {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .socialMediaContainer li a:hover {
+        cursor: pointer;
+    }
+
+    .socialMediaContainer .facebook {
+        background-position: left -669px;
+    }
+
+    .socialMediaContainer .facebook:hover {
+        background-position: left -728px;
+    }
+
+    .socialMediaContainer .twitter {
+        background-position: -67px -669px;
+    }
+
+    .socialMediaContainer .twitter:hover {
+        background-position: -67px -728px;
+    }
+
+    .socialMediaContainer .pinterest {
+        background-position: -135px -669px;
+        background-size: inherit !important;
+    }
+
+    .socialMediaContainer .pinterest:hover {
+        background-position: -135px -728px;
+    }
+
+    .socialMediaContainer .googleplus {
+        background-position: -202px -669px;
+    }
+
+    .socialMediaContainer .googleplus:hover {
+        background-position: -202px -728px;
+    }
+    
+    .socialMediaContainer .download {
+        background-position: -269px -669px;
+    }
+
+    .socialMediaContainer .download:hover {
+        background-position: -269px -728px;
+    }
+
+    .starbucksLoveShareCard .titleContainer {
+        padding: 30px 10px;
+    }
+    .cardImageContainer {
+        width: 426px;
+        max-width: 100%;
+        margin: 2em auto;
+        padding: 5px 20px 10px;
+    }
+
+    #cardImage {
+        width: 426px;
+    }
+
+    .mainCanvasSection {
+        margin-bottom: 33px;
+    }
+}

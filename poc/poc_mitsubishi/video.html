@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VIDEO</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		#canvas {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			width: 100%;
+			/*height: 100%;*/
+			/*position: absolute;*/
+			background-color: #000;
+		}
+
+		.content {
+			color: #000;
+			margin: 0 auto;
+			font-size: 40px;
+		}
+
+		.content input[type=range] {
+			left: 10%;
+			top: 175px;
+			width: 100%;
+			/*display: none;*/
+			margin: 30px auto;
+			/*position: absolute;*/
+		}
+
+		.content input[type='range']::-webkit-slider-thumb{
+			background:#f60; height:30px; width:30px; border-radius: 30px;
+		}
+
+		#playButton {
+			top: 50px;
+			color: #fff;
+			border: none;
+			outline: none;
+			font-size: 60px;
+			font-weight: bold;
+			position: absolute;
+			background: transparent;
+			text-shadow: 2px 2px 4px #000000;
+		}
+
+		input[type=range] {
+		  -webkit-appearance: none;
+		  margin: 30px 0;
+		  width: 100%%;
+			display: block;
+		}
+		input[type=range]:focus {
+		  outline: none;
+		}
+		input[type=range]::-webkit-slider-runnable-track {
+		  width: 100%;
+		  height: 15.8px;
+		  cursor: pointer;
+		  animate: 0.2s;
+		  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		  background: #ac51b5;
+		  border-radius: 25px;
+		  border: 0px solid #000101;
+		}
+		input[type=range]::-webkit-slider-thumb {
+		  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		  border: 0px solid #000000;
+		  height: 25px;
+		  width: 39px;
+		  border-radius: 7px;
+		  background: #65001c;
+		  cursor: pointer;
+		  -webkit-appearance: none;
+		  margin-top: -3.6px;
+		}
+		input[type=range]:focus::-webkit-slider-runnable-track {
+		  background: #ac51b5;
+		}
+		input[type=range]::-moz-range-track {
+		  width: 100%;
+		  height: 12.8px;
+		  cursor: pointer;
+		  animate: 0.2s;
+		  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		  background: #ac51b5;
+		  border-radius: 25px;
+		  border: 0px solid #000101;
+		}
+		input[type=range]::-moz-range-thumb {
+		  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		  border: 0px solid #000000;
+		  height: 20px;
+		  width: 39px;
+		  border-radius: 7px;
+		  background: #65001c;
+		  cursor: pointer;
+		}
+		input[type=range]::-ms-track {
+		  width: 100%;
+		  height: 12.8px;
+		  cursor: pointer;
+		  animate: 0.2s;
+		  background: transparent;
+		  border-color: transparent;
+		  border-width: 39px 0;
+		  color: transparent;
+		}
+		input[type=range]::-ms-fill-lower {
+		  background: #ac51b5;
+		  border: 0px solid #000101;
+		  border-radius: 50px;
+		  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		}
+		input[type=range]::-ms-fill-upper {
+		  background: #ac51b5;
+		  border: 0px solid #000101;
+		  border-radius: 50px;
+		  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		}
+		input[type=range]::-ms-thumb {
+		  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+		  border: 0px solid #000000;
+		  height: 20px;
+		  width: 39px;
+		  border-radius: 7px;
+		  background: #65001c;
+		  cursor: pointer;
+		}
+		input[type=range]:focus::-ms-fill-lower {
+		  background: #ac51b5;
+		}
+		input[type=range]:focus::-ms-fill-upper {
+		  background: #ac51b5;
+		}
+
+  </style>
+</head>
+<body>
+
+	<!-- <video src="assets/drift.mp4" width="300" height="200" controls webkit-playsinline></video> -->
+	<canvas id="canvas"></canvas>
+
+	<button type="button" name="playButton" id="playButton" onclick="playVideo()">Play</button>
+
+	<div class="content">
+		<label for="frames">Video Time:  </label>
+		<output for="frames" id="time">0</output>
+		<input type="range" data-show-value="true" id="frames" min="0.0" value="0" max="10" step="0.1" oninput="outputUpdate(value)">
+		<div>Buffered Video Time: <span id="bufferedVideoTime">0</span></div>
+	</div>
+
+
+
+	<script>
+
+	/**************************************************************************************************
+	During the loading process of an audio/video, the following events occur, in this order:
+
+		1. loadstart
+		2. durationchange
+		3. loadedmetadata
+		4. loadeddata
+		5. progress
+		6. canplay
+		7. canplaythrough
+	*/
+		var bufferedVideo = document.getElementById('bufferedVideoTime');
+		var updated = false;
+		var video	= document.createElement('video');
+				video.width	= 480;
+				video.height	= 140;
+				video.setAttribute('webkit-playsinline', 'true');
+				video.setAttribute('fullscreenEnabled', 'false')
+				video.setAttribute('src', 'assets/starwars.mp4');
+				// video.setAttribute('src', 'assets/drift.mp4');
+				video.setAttribute('preload', 'auto');
+		// document.body.appendChild(video);
+
+		var canvasWidth = 480;
+		var canvasHeight = 140;
+
+		canvas = document.getElementById('canvas');
+		canvas.width = canvasWidth;
+		canvas.height = canvasHeight;
+
+		var context = canvas.getContext('2d');
+		var isPlaying = false;
+
+		video.addEventListener('play', function(){
+			exitFullscreen();
+		  draw(video,context,canvasWidth,canvasHeight);
+		},false);
+
+		video.addEventListener('pause', function(){
+		  draw(video,context,canvasWidth,canvasHeight);
+		},false);
+
+		video.oncanplaythrough = function() {
+				// alert("Start: " + video.buffered.start(0) + " End: " + video.buffered.end(0));
+		};
+
+		function draw(v,c,w,h) {
+			context.drawImage(v,0,0,w,h);
+
+			if(updated){
+				video.pause();
+			}
+
+			document.getElementById('time').innerHTML = video.currentTime;
+			document.getElementById('frames').value = video.currentTime;
+
+			requestAnimationFrame(function(){
+				draw(v,c,w,h);
+
+				var bufferedTime = video.buffered.end(0);
+				bufferedVideo.innerHTML = bufferedTime;
+			});
+
+		}
+
+		function outputUpdate(frame) {
+			video.currentTime = frame;
+			video.play();
+			video.pause();
+			updated = true;
+			document.getElementById('playButton').innerHTML = 'Play';
+			document.querySelector('#time').value = frame;
+		}
+
+		function playVideo(){
+			if(isPlaying){
+				video.pause();
+				isPlaying = false;
+				document.getElementById('playButton').innerHTML = 'Play';
+			}
+			else {
+				video.play();
+				updated = false;
+				if(video.webkitDisplaingFullScreen){
+					exitFullscreen();
+				}
+				isPlaying = true;
+				document.getElementById('playButton').innerHTML = 'Pause';
+			}
+		}
+
+		// Remove fullscreen
+		function exitFullscreen() {
+			if(document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if(document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+			} else if(document.webkitExitFullscreen) {
+				document.webkitExitFullscreen();
+			}
+		}
+
+
+	</script>
+</body>
+</html>

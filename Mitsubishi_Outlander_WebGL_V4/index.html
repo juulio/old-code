@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>xyz_v2 WebGL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="style.css" rel="stylesheet"/>
+    <link href="menu.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<script src="ion_0.7_2.js"></script>
+
+<div id="my_webgl"></div>
+
+<input type="checkbox" name="toggle" id="toggle" />
+<label for="toggle"></label>
+
+<div class="menu">
+    <div id="camera-switcher">
+        <h3> Materials </h3>
+        <a id="mat-switch1">White1</a>
+        <a id="mat-switch2">White2</a>
+        <a id="mat-switch3">Red1</a>
+        <a id="mat-switch4">Red2</a>
+        <a id="mat-switch7">Red3</a>
+        <h3> Scene </h3>
+        <a id="mat-switch5">Bright</a>
+        <a id="mat-switch6">Dark</a>
+        <h3> Cameras </h3>
+    </div>
+</div>
+
+
+
+<script>
+
+    var preloader = new THREE.Preloader();
+    preloader.start();
+
+    setTimeout( function (){
+
+
+            window.ion = new IonVR({
+                scene: '_xyz2a.js',
+                secondary_scene: '_xyz1nd.js',
+                container: $g('my_webgl'),
+                g_in: true,
+                g_out: true,
+                phys_shading: true,
+                spin: false,
+                preloader: preloader
+            });
+
+            ion.onReady = function() {
+                ion.addCamerasButtons($g('camera-switcher'));
+                var mdls = ion.scene_contents.objects,
+                    mats = ion.scene_contents.materials,
+                    texs = ion.scene_contents.textures;
+
+
+                $g('mat-switch1').addEventListener('click', function() {
+
+                    mdls.mts_body.material = mdls.mts_door.material = mdls.mts_hatch.material = mats.mat_body1;
+                    ion.requestRender();
+                });
+
+                $g('mat-switch2').addEventListener('click', function() {
+                    mdls.mts_body.material = mdls.mts_door.material = mdls.mts_hatch.material = mats.mat_body2;
+                    ion.requestRender();
+                });
+                
+                $g('mat-switch7').addEventListener('click', function() {
+
+                    mdls.mts_body.material = mdls.mts_door.material = mdls.mts_hatch.material = mats.mat_body5;
+                    ion.requestRender();
+                });
+                
+                $g('mat-switch3').addEventListener('click', function() {
+
+                    mdls.mts_body.material = mdls.mts_door.material = mdls.mts_hatch.material = mats.mat_body3;
+                    ion.requestRender();
+                });
+
+                $g('mat-switch4').addEventListener('click', function() {
+                    mdls.mts_body.material = mdls.mts_door.material = mdls.mts_hatch.material = mats.mat_body4;
+                    ion.requestRender();
+                });
+                
+                $g('mat-switch5').addEventListener('click', function() {
+                    mdls.mts_bg.material = mats.mat_bg;
+               
+                    ion.requestRender();
+                });
+                
+                $g('mat-switch6').addEventListener('click', function() {
+                    mdls.mts_bg.material = mats.mat_bg2;
+               
+                    ion.requestRender();
+                });
+            }
+
+    }, 1000);
+
+
+</script>
+
+
+</body>
+</html>

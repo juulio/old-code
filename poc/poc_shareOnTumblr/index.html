@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>share on Tumblr</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+
+		Click -> 
+		<!-- Put this tag wherever you want your button to appear -->
+		<span id="tumblr_button_abc123"></span>
+
+		<!-- Set these variables wherever convenient -->
+		<script type="text/javascript">
+		    var tumblr_photo_source = "";
+		    var tumblr_photo_caption = "";
+		    var tumblr_photo_click_thru = "";
+		</script>
+
+		<!-- Put this code at the bottom of your page -->
+		<script type="text/javascript">
+		    var tumblr_button = document.createElement("a");
+		    tumblr_button.setAttribute("href", "http://www.tumblr.com/share/photo?source=" + encodeURIComponent("http://www.nacion.com/nacional/politica/expresidente-Figueres-Olsen-Via-costarricense_LNCIMA20130703_0120_27.jpg") + "&caption=" + encodeURIComponent("http://www.nacion.com/nacional/politica/expresidente-Figueres-Olsen-Via-costarricense_LNCIMA20130703_0120_27.jpg") + "&clickthru=" + encodeURIComponent("http://www.nacion.com/nacional/politica/expresidente-Figueres-Olsen-Via-costarricense_LNCIMA20130703_0120_27.jpg"));
+		    tumblr_button.setAttribute("title", "Share on Tumblr");
+		    tumblr_button.setAttribute("style", "display:inline-block; text-indent:-9999px; overflow:hidden; width:20px; height:20px; background:url('https://platform.tumblr.com/v1/share_4T.png') top left no-repeat transparent;");
+		    tumblr_button.innerHTML = "Share on Tumblr";
+		    document.getElementById("tumblr_button_abc123").appendChild(tumblr_button);
+		</script>
+
+	</body>
+</html>
+

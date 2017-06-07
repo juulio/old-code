@@ -1,0 +1,98 @@
+body{
+	background-color: #EEE;
+}
+.bichin{
+	position: relative;
+}
+.bichin1{
+	background: url("../images/bass.png");
+	background-image: url("../images/Bichin_Fase01.svg");
+	width: 200px;
+	height: 200px;
+	background-size: 200px 200px;
+	position: absolute;
+	animation:firstDance .5s linear infinite;
+	-moz-animation:firstDance .5s linear infinite; /* Firefox */
+	-webkit-animation:firstDance .5s linear infinite; /* Safari and Chrome */
+	-o-animation:firstDance .5s linear infinite; /* Opera */
+}
+.bichin1-2{
+	background: url("../images/bass.png");
+	background-image: url("../images/Bichin_Fase02.svg");
+	width: 200px;
+	height: 200px;
+	background-size: 200px 200px;
+	position: absolute;
+	opacity: 0;
+	animation:secondDance .5s linear infinite;
+	-moz-animation:secondDance .5s linear infinite; /* Firefox */
+	-webkit-animation:secondDance .5s linear infinite; /* Safari and Chrome */
+	-o-animation:secondDance .5s linear infinite; /* Opera */
+}
+/*FIRST DANCE*/
+
+@keyframes firstDance
+{
+0%   {opacity:0;}
+49%   {opacity:0;}
+50%  {opacity:100;}
+100%  {opacity:100;}
+}
+
+@-moz-keyframes firstDance /* Firefox */
+{
+0%   {opacity:0;}
+49%   {opacity:0;}
+50%  {opacity:100;}
+100%  {opacity:100;}
+}
+
+@-webkit-keyframes firstDance /* Safari and Chrome */
+{
+0%   {opacity:0;}
+49%   {opacity:0;}
+50%  {opacity:100;}
+100%  {opacity:100;}
+}
+
+@-o-keyframes firstDance /* Opera */
+{
+0%   {opacity:0;}
+49%   {opacity:0;}
+50%  {opacity:100;}
+100%  {opacity:100;}
+}
+
+/*SECOND DANCE*/
+
+@keyframes secondDance
+{
+0%   {opacity:100;}
+49%   {opacity:100;}
+50%  {opacity:0;}
+100%  {opacity:0;}
+}
+
+@-moz-keyframes secondDance /* Firefox */
+{
+0%   {opacity:100;}
+49%   {opacity:100;}
+50%  {opacity:0;}
+100%  {opacity:0;}
+}
+
+@-webkit-keyframes secondDance /* Safari and Chrome */
+{
+0%   {opacity:100;}
+49%   {opacity:100;}
+50%  {opacity:0;}
+100%  {opacity:0;}
+}
+
+@-o-keyframes secondDance /* Opera */
+{
+0%   {opacity:100;}
+49%   {opacity:100;}
+50%  {opacity:0;}
+100%  {opacity:0;}
+}

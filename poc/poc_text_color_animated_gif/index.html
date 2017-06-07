@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    /* Main styles */
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+    .text {
+      fill: url(#animated-colors);
+    }
+
+    body {
+      font: 150px/1 Open Sans, Impact;
+      margin: 0;
+    }
+
+    .svg-container {
+      width: 730px;
+      margin: 40px auto;
+      /*border: solid 1px red;*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="svg-container">
+    <svg viewBox="0 0 730 300">
+
+      <!-- Pattern -->
+      <pattern
+               id="animated-colors"
+               viewBox="30 100 186 200"
+               patternUnits="userSpaceOnUse"
+               width="216" height="200"
+               x="-70" y="35">
+
+        <image xlink:href="colors.gif" width="420" height="420"/>
+
+      </pattern>
+
+      <text text-anchor="middle">
+        <tspan x="50%" y="20%" dy=".35em" class="text">WE ARE</tspan>
+        <tspan x="50%" y="65%" dy=".35em" class="text">POSSIBLE</tspan>
+      </text>
+    </svg>
+  </div>
+</body>
+</html>

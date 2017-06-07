@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+	<head>
+		<title>raycaster</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<script src="libs/three.min.js"></script>
+		<script src="libs/Detector.js"></script>
+		<script src="libs/Stats.js"></script>
+		<script src="libs/OrbitControls.js"></script>
+
+		<style>body{margin:0;}</style>
+	</head>
+<body>
+  <div id="container"></div>
+
+	<script type="text/javascript">
+		var stats, scene, renderer, controls;
+		var camera, raycaster;
+		var hotspot1IsVisible, cube03;
+
+		if( !init() )	animate();
+
+		// init the scene
+		function init(){
+
+			if( Detector.webgl ){
+				renderer = new THREE.WebGLRenderer({
+					antialias		: true,	// to get smoother output
+					preserveDrawingBuffer	: true	// to allow screenshot
+				});
+				renderer.setClearColor( 0x000000, 1 );
+			// uncomment if webgl is required
+			//}else{
+			//	Detector.addGetWebGLMessage();
+			//	return true;
+			}else{
+				renderer	= new THREE.CanvasRenderer();
+			}
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.getElementById('container').appendChild(renderer.domElement);
+
+			// add Stats.js - https://github.com/mrdoob/stats.js
+			stats = new Stats();
+			stats.domElement.style.position	= 'absolute';
+			stats.domElement.style.bottom	= '0px';
+			document.body.appendChild( stats.domElement );
+
+			// create a scene
+			scene = new THREE.Scene();
+
+			// put a camera in the scene
+			camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 10000 );
+			camera.position.set(0, 0, 19);
+			scene.add(camera);
+
+			// set up orbit controls
+			controls = new THREE.OrbitControls(camera);
+			controls.enablePan = true;
+			controls.enableZoom = true;
+
+			// Add a raycaster object
+			raycaster = new THREE.Raycaster(); // create once
+			mouse = new THREE.Vector2(); // create once
+
+			// Booleans to show/hide the hotspots
+			hotspot1IsVisible = false;
+			hotspot2IsVisible = false;
+
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+			var cube = new THREE.Mesh( geometry, material );
+			cube.position.x = -2;
+			cube.name = "cube01";
+			scene.add( cube );
+
+			geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			material = new THREE.MeshBasicMaterial( {color: 0xff00ff} );
+			cube = new THREE.Mesh( geometry, material );
+			cube.position.x = 2;
+			cube.name = "cube02";
+			scene.add( cube );
+
+			geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			material = new THREE.MeshBasicMaterial( {color: 0xff0000} );
+			cube03 = new THREE.Mesh( geometry, material );
+			cube03.position.x = -2;
+			cube03.position.y = -3;
+			cube03.visible = false;
+			scene.add( cube03 );
+		}
+
+		function degToRad(deg) {
+		    return deg * Math.PI / 180;
+		}
+
+		// calculate mouse position in normalized device coordinates
+		// (-1 to +1) for both components
+		function onMouseMove( event ) {
+
+			mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+			mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+		}
+
+		function onMouseClick( event ) {
+			// calculate mouse position in normalized device coordinates
+			// (-1 to +1) for both components
+			mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+			mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+		}
+
+		// animation loop
+		function animate() {
+			requestAnimationFrame( animate );
+
+			render();
+
+			stats.update();
+		}
+
+		// render the scene
+		function render() {
+			// update Orbit Controls
+			controls.update();
+
+			// update the picking ray with the camera and mouse position
+			raycaster.setFromCamera( mouse, camera );
+
+			// calculate objects intersecting the picking ray
+			var intersects = raycaster.intersectObjects( scene.children );
+
+			if ( intersects.length > 0 ) {
+				var target = intersects[0].object;
+				if(target.name == 'cube01'){
+					cube03.visible = true;
+				}
+				if(target.name == 'cube02'){
+					cube03.visible = false;
+				}
+			}
+
+			renderer.render( scene, camera );
+		}
+
+		// window.addEventListener( 'mousemove', onMouseMove, false );
+		window.addEventListener( 'click', onMouseClick, false );
+
+	</script>
+</body>
+</html>

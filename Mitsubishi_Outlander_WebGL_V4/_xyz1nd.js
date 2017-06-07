@@ -1,0 +1,1 @@
+{"metadata":{"formatVersion":3.99,"type":"zordon_scene"},"urlBaseType":"","objects":{"main_group":{"position":[0,-35,0],"rotation":[0,0,0],"scale":[2,2,2],"visible":true,"children":{}}},"geometries":{},"embeds":{},"materials":{},"textures":{},"fogs":{},"defaults":{"bgcolor":[0,0,0],"bgalpha":1,"camera":"my_camera"}}

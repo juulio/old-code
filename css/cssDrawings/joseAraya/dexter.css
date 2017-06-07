@@ -1,0 +1,175 @@
+.hair {
+	z-index: 1;
+	position: absolute;
+	top: 43px;
+	left: 40px;
+	width: 380px;
+	height: 90px;
+	border: #000 solid 9px;
+	-moz-border-radius: 300px / 125px;
+	-webkit-border-radius: 300px / 125px;
+	border-radius: 300px / 125px;
+	-ms-transform: skew(-7deg, -7deg);
+    -webkit-transform: skew(-7deg, -7deg);
+    transform: skew(-7deg, -7deg);
+    background-color: #ff5000;
+}
+
+.hair:before {
+	content: "";
+	position: absolute;
+	top: 43px;
+	left: -42px;
+	width: 35px;
+	height: 5px;
+	background-color: #000;
+}
+
+.hair:after {
+	content: "";
+	position: absolute;
+	top: 28px;
+	left: -56px;
+	width: 50px;
+	height: 5px;
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	background-color: #000;
+}
+
+.body {
+	position: relative;
+	top: 40px;
+	left: 10px;
+	width: 400px;
+	height: 480px;
+	border: #000 solid 9px;
+	-moz-border-radius: 200px / 125px;
+	-webkit-border-radius: 200px / 125px;
+	border-radius: 200px / 125px;
+}
+
+.body:before {
+	content: "";
+	position: absolute;
+	top: -8px;
+	left:-8px;
+	width: 100%;
+	height: 60%;
+	background-color: #f8d5bf;
+	border: #000 solid 9px;
+	-moz-border-radius: 200px / 125px;
+	-webkit-border-radius: 200px / 125px;
+	border-radius: 200px / 125px;
+}
+
+.nose {
+	z-index: 4;
+	position: absolute;
+	top: 232px;
+	left: 244px;
+	width: 0;
+	height: 0;
+	border-top: 70px solid transparent;
+	border-right: 35px solid #000;
+	border-bottom: 15px solid transparent;
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+
+.nose:after {
+	content: "";
+	position: absolute;
+	top: -50px;
+	left: -4px;
+	width: 0;
+	height: 0;
+	border-top: 70px solid transparent;
+	border-right: 30px solid #f8d5bf;
+	border-bottom: 15px solid transparent;
+	-ms-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+
+.uniform {
+	position: absolute;
+	left: 110px;
+	top: 335px;
+	height: 190px;
+	border-left: #000 solid 15px;
+}
+
+.uniform:before, .uniform:after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	top: 45px;
+	width: 30px;
+	height: 40px;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	background-color: #000;
+}
+
+div.uniform:after {
+	top: 120px;
+}
+
+.glass {
+	z-index: 2;
+	position: absolute;
+	left: 55px;
+	top: 80px;
+	width: 135px;
+	height: 220px;
+	border: #000 solid 23px;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	background-color: #0096ff;
+}
+
+.glass:before {
+	content: "";
+	position: absolute;
+	left: -55px;
+	top: 85px;
+	width: 40px;
+	height: 25px;
+	-ms-transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	background-color: #000;
+}
+
+.glass:after {
+	content: "";
+	position: absolute;
+	right: 5px;
+	top: 65px;
+	width: 55px;
+	height: 80px;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	background-color: #000;
+}
+
+.glass.right {
+	left: 220px;
+}
+
+.glass.right:before {
+	left: 150px;
+	-ms-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+}
+
+.glass.right:after {
+	left: 5px;
+}

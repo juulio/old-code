@@ -1,0 +1,506 @@
+/* ------------------------ */
+/* ---- GLOBAL STYLING ---- */
+/* ------------------------ *
+
+** <Client Name>
+*   <Project Name>
+
+** TOC 
+    1. CSS Reset
+    2. General
+    3. Header
+    4. Footer
+    5. Content
+    6. Media Queries */
+
+
+/* 1. CSS RESET
+------------------------------------------------ */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 2. GENERAL
+------------------------------------------------ */
+
+@font-face {
+    font-family: "Gotham BookItalic";
+    src: url('../fonts/Gotham-BookItalic.eot');
+    src: url('../fonts/Gotham-BookItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-BookItalic.svg#Gotham Book') format('svg'),
+    url('../fonts/Gotham-BookItalic.woff') format('woff'),
+    url('../fonts/Gotham-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham Bold";
+    src: url('../fonts/Gotham-Bold.eot');
+    src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-Bold.svg#Gotham Bold') format('svg'),
+    url('../fonts/Gotham-Bold.woff') format('woff'),
+    url('../fonts/Gotham-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham BoldItalic";
+    src: url('../fonts/Gotham-BoldItalic.eot');
+    src: url('../fonts/Gotham-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-BoldItalic.svg#Gotham Bold') format('svg'),
+    url('../fonts/Gotham-BoldItalic.woff') format('woff'),
+    url('../fonts/Gotham-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham-Book.eot');
+    src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-Book.svg#Gotham Book') format('svg'),
+    url('../fonts/Gotham-Book.woff') format('woff'),
+    url('../fonts/Gotham-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamThinRegular';
+    src: url('../fonts/gothamthin.eot');
+    src: url('../fonts/gothamthin.eot') format('embedded-opentype'),
+         url('../fonts/gothamthin.woff') format('woff'),
+         url('../fonts/gothamthin.ttf') format('truetype'),
+         url('../fonts/gothamthin.svg#GothamThinRegular') format('svg');
+}
+
+body {
+    font-family: "Gotham Book";
+}
+
+/* ::::: Helpers ::::: */
+
+.ir {
+    /*width: 350px;
+    height: 75px;*/
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ir span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* background: url("images/sample-image.jpg"); */
+}
+
+.clear {
+    clear: both;
+}
+
+/* 3. HEADER
+------------------------------------------------ */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 13;
+
+    width: 100%;
+
+    background: url(../img/header-back.png) repeat-x 0 0;
+}
+
+.logo {
+    display: block;
+    width: 1024px;
+    height: 102px;
+    margin: 0 auto;
+
+    background: url(../img/header.png) no-repeat 0 0;
+}
+
+nav {
+    width: 100%;
+
+    background: #fff;
+}
+
+nav ul {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+
+    width: 16.6%;
+    padding: 5px 0;
+
+    color: #b9b9b9;
+    font-family: 'GothamThinRegular';
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a.active {
+    font-family: "Gotham Book";
+    color: #390000;
+}
+
+nav a.active:hover {
+    color: #390000;
+}
+
+nav a:hover {
+    color: #5b5b5b;
+}
+
+
+/* 4. FOOTER
+------------------------------------------------ */
+
+
+/* 5. CONTENT
+------------------------------------------------ */
+
+
+#home {
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.home-caption {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    margin: 0 0 50px;
+
+    color: #fff;
+    font-family: 'GothamThinRegular';
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+
+    background: no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.central-caption {
+    position: relative;
+    padding-top: 0;
+
+    font-family: 'GothamThinRegular';
+    font-size: 62px;
+    line-height: 65px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-note,
+.footer-caption {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    padding: 8px 0;
+
+    font-size: 9px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+
+
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-inner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    transition: left 0.9s ease-in-out 0s;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    line-height: 1;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-control {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+
+    width: 15%;
+}
+
+.carousel-control.left {
+    background-repeat: repeat-x;
+}
+
+.carousel-control.right {
+    background-repeat: repeat-x;
+    left: auto;
+    right: 0;
+}
+
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+    left: 30%;
+}
+
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+    right: 30%;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+    height: 47px;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 20px;
+
+    background: url(../img/arrows.png) no-repeat 0 0;
+}
+
+.glyphicon-chevron-left {
+    height: 47px;
+    width: 20px;
+
+    background: url(../img/arrows.png) no-repeat left top;
+}
+
+.left:hover .glyphicon-chevron-left {
+    background-position: left bottom;
+}
+
+.glyphicon-chevron-right {
+    height: 47px;
+    width: 20px;
+
+    background: url(../img/arrows.png) no-repeat right top;
+}
+
+.right:hover .glyphicon-chevron-right {
+    background-position: right bottom;
+}
+
+
+/*.carousel-control .icon-prev:before {
+    content: "‹";
+}
+
+.carousel-control .icon-next:before {
+    content: "›";
+}*/
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 95px;
+    padding: 16px 0 2px;
+
+    background: #fff;
+}
+
+.carousel-caption p {
+    width: 80%;
+    margin: 0 auto 8px;
+
+    font-family: 'GothamThinRegular';
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+
+.carousel-caption p.bold {
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+
+    font-family: "Gotham Book";
+    font-size: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+/* 6. MEDIA QUERIES
+------------------------------------------------ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
+}
+
+/* Retina Display ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
+}

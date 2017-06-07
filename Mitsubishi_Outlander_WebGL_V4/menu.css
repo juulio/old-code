@@ -1,0 +1,91 @@
+﻿* {
+  margin:0;
+  padding:0;
+  font-family:"Helvetica Neue", Helvetica, Sans-serif;
+  word-spacing:-2px;
+}
+
+h1 {
+  font-size:40px;
+  font-weight:bold;
+  color:#191919;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-weight:normal;
+  font-size:20px;
+  color:#888;
+  padding:5px 0;
+}
+
+.menu {
+background-color: rgba(0,0,0,0.0);
+color:#FFF;
+position: absolute;
+top: -100%;
+right: 0px;
+width: 80px;
+height: 100%;
+padding: 8px;
+transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+overflow: auto;
+box-sizing: border-box;
+  z-index: 99;
+}
+
+.menu h1 {
+  color:#FFF;
+}
+
+#toggle {
+  position:absolute;
+  appearance:none;
+  cursor:pointer;
+  left:-100%;
+  top:-100%;
+}
+
+#toggle + label {
+  position:absolute;
+  cursor:pointer;
+  padding:4px;
+  background: #26ae90;
+width: 60px;
+border-radius: 2px;
+padding: 2px 8px;
+color: #FFF;
+line-height:20px;
+font-size:10px;
+text-align:center;
+top: 4px;
+right: 4px;
+z-index:100;
+-webkit-font-smoothing: antialiased;
+cursor: pointer;
+  transition:all 500ms ease;
+}
+#toggle + label:after {
+  content:"Show UI" 
+}
+
+.container {
+transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  padding:5em 3em;
+}
+
+#toggle:checked ~ .menu {
+  top: 0;
+}
+
+#toggle:checked ~ .container {
+}
+
+#toggle:checked + label {
+  background:#dd6149;
+}
+
+#toggle:checked + label:after {
+  content:"Hide UI"
+}
+
