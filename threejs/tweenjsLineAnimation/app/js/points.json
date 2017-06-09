@@ -1,0 +1,16 @@
+[
+    {
+        "id": "tween0",
+        "startX": 200,
+        "startY": 0,
+        "endX": 200,
+        "endY": 200
+    },
+    {
+        "id": "tween1",
+        "startX": 200,
+        "startY": 200,
+        "endX": 100,
+        "endY": 200
+    }
+]
